@@ -1,0 +1,7 @@
+.btn-outline-primary {
+  display: flex;
+  right: 30px;
+  position: absolute;
+  background-color: black;
+  color: white;
+}
