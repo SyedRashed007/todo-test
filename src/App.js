@@ -1,14 +1,12 @@
 import './App.css';
-import Task from './components/Main/Task'
 import Complete from './components/Complete'
 import Header from './components/Header/Header'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Task/>
       <Complete/>
     </div>
   );
