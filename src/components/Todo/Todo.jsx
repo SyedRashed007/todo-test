@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import CreateTask from '../modals/CreateTask'
 import Card from './Card'
 
-function Header() {
+function Todo() {
 
     const [modal, setModal] = useState(false)
     const [taskList, setTaskList] = useState([])
@@ -66,4 +66,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Todo

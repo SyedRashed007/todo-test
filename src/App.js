@@ -1,11 +1,11 @@
 import './App.css';
-import Header from './components/Todo/Header'
+import Todo from './components/Todo/Todo'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Todo/>
     </div>
   );
 }
