@@ -21,7 +21,7 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     
     return(
         <div class = "card-wrapper">
-            <div class = "task-holder">To Do <hr/>
+            <div class = "task-holder">
                <span class = "card-header">{taskObj.Name}</span>
                <p className = "mt-3">{taskObj.Description}</p>
             </div>
