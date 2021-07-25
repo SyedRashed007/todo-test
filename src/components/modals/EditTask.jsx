@@ -8,19 +8,17 @@ const EditTask = ({modal, toggle, updateTask, taskObj}) => {
     const handleChange = (e) => {
         
         const {name, value} = e.target
-
         if(name === "taskName"){
             setTaskName(value)
         }else{
             setDescription(value)
         }
-
-
     }
 
     useEffect(() => {
         setTaskName(taskObj.Name)
         setDescription(taskObj.Description)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const handleUpdate = (e) => {

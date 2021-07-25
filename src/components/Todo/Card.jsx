@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import EditTask from '../modals/EditTask'
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Card = ({taskObj, index, deleteTask, updateListArray}) => {
 
@@ -22,12 +24,12 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     return(
         <div class = "card-wrapper">
             <div class = "task-holder">
-               <span class = "card-header">{taskObj.Name}</span>
-               <p className = "mt-3">{taskObj.Description}</p>
-            </div>
-            <div className="button">
-                <ButtonDropdown isOpen={dropdownOpen} toggle={toggled} >
-                    <DropdownToggle caret className="toggle">
+                <Row>
+                    <Col sm={10} class = "card-header">{taskObj.Name}</Col>
+                    <Col sm={10} className = "mt-3">{taskObj.Description}</Col>
+                    <Col sm={1} className="toggle">
+                <ButtonDropdown isOpen={dropdownOpen} toggle={toggled}>
+                    <DropdownToggle caret>
                         Click here
                     </DropdownToggle>
                     <DropdownMenu>
@@ -35,6 +37,8 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
                         <DropdownItem onClick={handleDelete}>Delete</DropdownItem>
                     </DropdownMenu>
                 </ButtonDropdown>
+                    </Col>
+                </Row>
             </div>
                 <EditTask modal = {modal} toggle = {toggle} updateTask={updateTask} taskObj = {taskObj}/>
        </div>
